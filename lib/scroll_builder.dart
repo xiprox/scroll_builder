@@ -11,13 +11,13 @@ class ScrollBuilder extends StatefulWidget {
   final ScrollController scrollController;
   final ScrollBuilderDelegate delegate;
   final double breakpoint;
-  final Widget child;
+  final Widget? child;
 
   const ScrollBuilder({
     Key? key,
     required this.scrollController,
     required this.delegate,
-    required this.child,
+    this.child,
     this.breakpoint = 0,
   }) : super(key: key);
 
@@ -51,7 +51,7 @@ class _ScrollBuilderState extends State<ScrollBuilder> {
     final percentage = min(1, _currentPosition / widget.breakpoint).toDouble();
     return widget.delegate.build(
       percentage,
-      widget.child,
+      widget.child ?? const SizedBox.shrink(),
     );
   }
 }
