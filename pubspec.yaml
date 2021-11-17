@@ -1,5 +1,5 @@
 name: scroll_builder
-description: A new Flutter package project.
+description: A widget that makes it easier to implement effects on scrollable widgets such as scale or fade.
 version: 0.0.1
 homepage: https://github.com/xiprox/scroll_builder
 
