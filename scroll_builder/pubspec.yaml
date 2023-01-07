@@ -1,6 +1,6 @@
 name: scroll_builder
 description: A widget that makes it easier to implement effects based on a scroll offset.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/xiprox/scroll_builder
 
 environment:
