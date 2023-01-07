@@ -53,4 +53,4 @@ SliverAppBar(
 ```
 
 ## Result
-![example gif](./.github/graphics/readme.gif)
+![example gif](https://i.imgur.com/dV2JV8g.gif)
