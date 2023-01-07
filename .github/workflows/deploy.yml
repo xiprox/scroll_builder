@@ -6,15 +6,16 @@ on:
 
 jobs:
   deploy:
-    name: Deploy plugin
+    name: Deploy package
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: scroll_builder
     steps:
       - uses: actions/checkout@v2
 
       - name: Install Flutter
         uses: subosito/flutter-action@v1
-
-      - run: cd scroll_builder
 
       - name: Install dependencies
         run: flutter pub get
@@ -28,8 +29,14 @@ jobs:
       - name: Prepare pub credentials
         run: echo '${{ secrets.PUB_CREDENTIALS }}' > "$PUB_CACHE/credentials.json"
 
+      - name: Copy README into package directory
+        run: cp ../README.md ./README.md
+
+      - name: Copy LICENSE into package directory
+        run: cp ../LICENSE ./LICENSE
+
       - name: Check Publish Warnings
-        run: pub publish --dry-run
+        run: flutter pub publish --dry-run
 
       - name: Publish Package
-        run: pub publish -f
+        run: flutter pub publish -f
