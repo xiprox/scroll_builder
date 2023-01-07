@@ -1,6 +1,6 @@
 name: scroll_builder
-description: A widget that makes it easier to implement effects on scrollable widgets such as scale or fade.
-version: 0.0.1
+description: A widget that makes it easier to implement effects based on a scroll offset.
+version: 1.0.0
 homepage: https://github.com/xiprox/scroll_builder
 
 environment:
