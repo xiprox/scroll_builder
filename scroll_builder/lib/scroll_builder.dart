@@ -36,7 +36,8 @@ class ScrollBuilder extends StatelessWidget {
     return AnimatedBuilder(
       animation: scrollController,
       builder: (context, child) {
-        final offset = scrollController.offset;
+        final offset =
+            scrollController.hasClients ? scrollController.offset : 0;
         final fraction = (offset / threshold).clamp(0.0, 1.0);
         return builder(
           context,
