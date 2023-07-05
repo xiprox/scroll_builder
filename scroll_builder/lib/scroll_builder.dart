@@ -15,8 +15,11 @@ class ScrollBuilder extends StatelessWidget {
   /// the scrolling towards the [threshold] has been done. For example, if
   /// [threshold] is given as `100.0` and the current scroll offset is `25.0`,
   /// [fraction] will be `0.25`.
-  final Widget Function(BuildContext context, double fraction, Widget? child)
-      builder;
+  final Widget Function(
+    BuildContext context,
+    double fraction,
+    Widget? child,
+  ) builder;
 
   final Widget? child;
 
